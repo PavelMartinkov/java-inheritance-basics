@@ -2,19 +2,35 @@ package practice;
 
 public class BankAccount {
 
+  public double amount;
+
+  public BankAccount() {
+  }
+
+  public BankAccount(double amount) {
+    this.amount = amount;
+  }
+
   public double getAmount() {
-    //TODO: реализуйте метод и удалите todo
-    // верните значение количества денег не счету
-    return 0;
+    return amount;
   }
 
   public void put(double amountToPut) {
-    //TODO: реализуйте метод и удалите todo
-    // метод зачисляет деньги на счет
+    if (amountToPut < amount) {
+      System.out.println("Сумма на счете: " + amount);
+    } else {
+      amount += amountToPut;
+      System.out.println("Сумма на счете: " + amount);
+    }
   }
 
   public void take(double amountToTake) {
-    //TODO: реализуйте метод и удалите todo
-    // метод списывает деньги со счета
+    if (amountToTake > getAmount()) {
+      amount -= 0.0;
+      System.out.println("Недостаточно средств, доступная сумма: " + amount);
+    } else {
+      amount -= amountToTake;
+      System.out.println("Остаток на счете: " + amount);
+    }
   }
 }
