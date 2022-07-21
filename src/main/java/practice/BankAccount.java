@@ -2,7 +2,7 @@ package practice;
 
 public class BankAccount {
 
-  public double amount;
+  protected double amount;
 
   public BankAccount() {
   }

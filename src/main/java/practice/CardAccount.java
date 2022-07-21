@@ -2,7 +2,7 @@ package practice;
 
 public class CardAccount extends BankAccount {
 
-    public double commission = 0.01;
+    protected double commission = 0.01;
 
     public CardAccount() {
     }
