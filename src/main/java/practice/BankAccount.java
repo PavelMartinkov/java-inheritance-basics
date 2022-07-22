@@ -26,7 +26,6 @@ public class BankAccount {
 
   public void take(double amountToTake) {
     if (amountToTake > getAmount()) {
-      amount -= 0.0;
       System.out.println("Недостаточно средств, доступная сумма: " + amount);
     } else {
       amount -= amountToTake;

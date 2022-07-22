@@ -15,7 +15,7 @@ public class DepositAccount extends BankAccount {
       if (lastIncome.plusMonths(1).isAfter(now)){
           return;
       } else if (amountToTake > amount) {
-          amount -= 0.0;
+          System.out.println("Возникла ошибка");
       } else {
           amount -= amountToTake;
       }

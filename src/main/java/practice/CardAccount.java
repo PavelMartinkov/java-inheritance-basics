@@ -2,7 +2,7 @@ package practice;
 
 public class CardAccount extends BankAccount {
 
-    protected double commission = 0.01;
+    private final double COMMISSION = 0.01;
 
     public CardAccount() {
     }
@@ -11,10 +11,10 @@ public class CardAccount extends BankAccount {
     public void take(double amountToTake) {
         super.take(amountToTake);
         if (amountToTake <= amount || amountToTake >= 100.0) {
-            amount -= amountToTake * commission;
+            amount -= amountToTake * COMMISSION;
         }
             else {
-                amount -= 0.0;
+            System.out.println("Возникла ошибка");
             }
         }
     }
